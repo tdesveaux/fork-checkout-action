@@ -71,7 +71,7 @@ export async function createCommandManager(
   )
 }
 
-class GitCommandManager {
+export class GitCommandManager {
   private gitEnv = {
     GIT_TERMINAL_PROMPT: '0', // Disable git prompt
     GCM_INTERACTIVE: 'Never' // Disable prompting for git credential manager
@@ -479,7 +479,7 @@ class GitCommandManager {
     return result
   }
 
-  private async execGit(
+  async execGit(
     args: string[],
     allowAllExitCodes = false,
     silent = false,
